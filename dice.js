@@ -113,32 +113,32 @@ function getCardSuit(cardSuit) {
 
 function healthImpact(cardSuit) {
         
-        let numberOfSides = 26;
+        let numberOfSides = 20;
 
         if (cardSuit === "Hearts") {
-                let roll26 = Math.floor((Math.floor(Math.random() * numberOfSides) + 1) * 1.5);
-                console.log("You gained " + roll26 + " points of health.");
-                return roll26;
+                let roll20 = Math.floor((Math.floor(Math.random() * numberOfSides) + 1) * 1.5);
+                console.log("You gained " + roll20 + " points of health.");
+                return roll20;
         }
 
         else if (cardSuit === "Diamonds") {
-                let roll26 = Math.floor((Math.floor(Math.random() * numberOfSides) + 1) / 2);
-                console.log("You gained " + roll26 + " points of health.");
-                return roll26;
+                let roll20 = Math.floor((Math.floor(Math.random() * numberOfSides) + 1) / 2);
+                console.log("You gained " + roll20 + " points of health.");
+                return roll20;
         }
 
         else if (cardSuit === "Clubs") {
-                let roll26 = Math.floor(Math.random() * numberOfSides) + 1;
-                console.log("You lost " + roll26 +  " points of health.");
-                roll26 *= -1;
-                return roll26;
+                let roll20 = Math.floor(Math.random() * numberOfSides) + 1;
+                console.log("You lost " + roll20 +  " points of health.");
+                roll20 *= -1;
+                return roll20;
         }
 
         else if (cardSuit === "Spades") {
-                let roll26 = Math.floor((Math.floor(Math.random() * numberOfSides) + 1) / 2);
-                console.log("You lost " + roll26 + " points of health.");
-                roll26 *= -1;
-                return roll26;
+                let roll20 = Math.floor((Math.floor(Math.random() * numberOfSides) + 1) / 2);
+                console.log("You lost " + roll20 + " points of health.");
+                roll20 *= -1;
+                return roll20;
         }
         
 }
@@ -169,5 +169,5 @@ function runGame() {
         return health;
 }
 
-runGame();
+
 
