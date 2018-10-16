@@ -1,7 +1,8 @@
 // starting values: 50 health points
 
 
-let health = 50
+let health = 50;
+let turnArray = [];
 
 function battleStrength() {
         let numberOfSides = 15;
@@ -144,7 +145,8 @@ function healthImpact(cardSuit) {
      
 
 function runGame() {
-        
+         
+              
         let battleScore = battleStrength();
         let battleResult = battleOutcome();
         let defenseResult = defenseOutcome();
@@ -160,8 +162,11 @@ function runGame() {
         let healthAffect = healthImpact(cardSuit);
         let newHealth = health + healthAffect;
         console.log("Your health is now " + newHealth);
-        return newHealth;
-        
+        turnArray.push(newHealth);
+        health = newHealth;
+        console.log(turnArray);       
+
+        return health;
 }
 
 runGame();
