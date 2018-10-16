@@ -145,22 +145,24 @@ function healthImpact(cardSuit) {
 
 function runGame() {
         
-        battleStrength();
-        battleOutcome();
-        defenseOutcome();
-        getCardValue();
+        let battleScore = battleStrength();
+        let battleResult = battleOutcome();
+        let defenseResult = defenseOutcome();
+        let cardValue = getCardValue();
         getCardSuit();
 
         console.log("Your turn resulted in the following:");
-        console.log("      Battle damage: " + battleStrength() + " Which was a " + battleOutcome());
-        console.log("      Defense: " + defenseOutcome());
+        console.log("      Battle damage: " + battleScore + " Which was a " + battleResult);
+        console.log("      Defense: " + defenseResult);
         let cardSuit = getCardSuit();
-        console.log("Your card is " + getCardValue() + " of " + cardSuit + ".");
+        console.log("Your card is " + cardValue + " of " + cardSuit + ".");
                         
         let healthAffect = healthImpact(cardSuit);
         let newHealth = health + healthAffect;
         console.log("Your health is now " + newHealth);
         return newHealth;
+        
 }
 
 runGame();
+
