@@ -135,7 +135,7 @@ function healthImpact(cardSuit) {
         }
 
         else if (cardSuit === "Spades") {
-                let roll20 = Math.floor((Math.floor(Math.random() * numberOfSides) + 1) / 2);
+                let roll20 = Math.floor((Math.floor(Math.random() * numberOfSides) + 1) * 1.5);
                 console.log("You lost " + roll20 + " points of health.");
                 roll20 *= -1;
                 return roll20;
